@@ -1,0 +1,24 @@
+.js_galerry {
+    display: block;
+    width: 200px;
+    height: 150px;
+    
+}
+
+.js_galerry_style{
+ display: flex;
+ justify-content: space-around;
+ list-style: none;
+
+}
+ #validation-input {
+    border: 3px solid #bdbdbd;
+  }
+  
+  #valid {
+    border-color: #4caf50;
+  }
+  
+  #invalid {
+    border-color: #f44336;
+  }
