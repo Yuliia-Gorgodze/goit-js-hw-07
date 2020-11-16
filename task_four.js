@@ -8,7 +8,9 @@ const counterValue  = document.querySelector("#value");
     
  });
  buttonDecrementRef.addEventListener('click', () => {
+    if (counterValue.textContent > 0){
     counterValue.textContent = Number(counterValue.textContent) - 1;
+    }
  });
 
   
