@@ -34,5 +34,7 @@ const images = [
     return criationElementGaleryRef;
 }
 
-images.forEach(img => {
-    console.log(criationGalery(img))})
+
+const imgagesArray = images.map(img => criationGalery(img));
+galleryRef.append(...imgagesArray);
+

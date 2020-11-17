@@ -1,14 +1,12 @@
 const categoriesUl = document.querySelector('#categories');
-const childCategoriesUl = categoriesUl.children
+const childCategoriesUl = categoriesUl.children;
+const arrayChildCategoriesUl = Array.from(childCategoriesUl);
 
-const animalsRef = childCategoriesUl[0].firstElementChild.textContent
-const productsRef = childCategoriesUl[1].firstElementChild.textContent
-const tehnologyRef = childCategoriesUl[2].firstElementChild.textContent
-const animalRefLength = childCategoriesUl[0].lastElementChild.children.length
-const productsRefLength = childCategoriesUl[1].lastElementChild.children.length
-const tehnologyRefLength = childCategoriesUl[2].lastElementChild.children.length
+ function info (card) {
+     const category = card.firstElementChild.textContent;
+     const lengthCategoryArray = card.lastElementChild.children.length;
+    return ` Категория:${category}\n  Количество элементов:${lengthCategoryArray}\n`
+}
 
-
-console.log(` Категория:  ${animalsRef}\n Количество элементов: ${animalRefLength}`);
-console.log(` Категория:  ${productsRef}\n Количество элементов: ${productsRefLength}`);
-console.log(` Категория:  ${tehnologyRef}\n Количество элементов: ${tehnologyRefLength}`);
+const cardCategory = arrayChildCategoriesUl.map(card => info(card));
+console.log(...cardCategory);
